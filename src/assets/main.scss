@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+h4 {
+  @apply text-black text-2xl font-semibold mb-3 leading-3;
+}
+
+h5 {
+  @apply text-black text-lg font-semibold mb-3;
+}
+
+p {
+  @apply text-gray text-sm;
+}
+
+.card {
+  @apply w-full text-gray text-xl rounded-3xl bg-card-background shadow-nav-card p-5 mb-6;
+}
+
+section .card {
+  @apply p-8;
+}
+
+.card-nav {
+  @apply rounded-xl;
+}
+
+button {
+  cursor: pointer;
+  @apply bg-primary text-secondary text-base font-medium rounded-full p-2 mr-2 px-5 shadow-button;
+  
+  &:hover {
+    @apply bg-santa;
+  }
+}
+
+button.button-secondary {
+  @apply bg-white text-gray border border-gray-light shadow-none;
+  &:hover {
+    @apply bg-gray text-white;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  @apply text-gray m-7 mr-14;
+}
+
+table {
+	@apply table-fixed w-full;
+}
+
+th {
+	@apply border-b border-gray-light bg-gray-lighter text-left p-3 text-sm text-gray font-medium;
+}
+
+td {
+	@apply p-3 text-xl text-black font-semibold;
+}
+
+tr:nth-child(even) td {
+	@apply bg-gray-lighter;
+}
+
+input[type='checkbox'] {
+	@apply rounded-sm border border-gray-light;
+}
+
+label {
+	@apply px-5;
+}
