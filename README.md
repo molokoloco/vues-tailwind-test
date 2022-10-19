@@ -1,3 +1,9 @@
+# Exercice with VUE.js & Tailwind.css
+
+![Demo screen](https://github.com/molokoloco/vues-tailwind-test/blob/main/PREVIEW.png?raw=true "Demo in progress")
+
+* Démo : to come...
+
 # Setup
 
 > Le projet est préconfiguré et ready-to-use.
