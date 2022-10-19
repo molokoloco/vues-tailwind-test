@@ -35,4 +35,4 @@ npm run dev
 
 **3 heures**
 
-### Envoyer l'exercice en .zip à l'adresse damien@meeko.pro sans le dossier `node_modules`.
+
