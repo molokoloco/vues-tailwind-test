@@ -2,7 +2,7 @@
 
 ![Demo screen](https://github.com/molokoloco/vues-tailwind-test/blob/main/PREVIEW.png?raw=true "Demo in progress")
 
-* **Démo : https://molokoloco.github.io/vues-tailwind-test/build/**
+* **Démo : https://molokoloco.github.io/vues-tailwind-test/dist/**
 
 # Setup
 
