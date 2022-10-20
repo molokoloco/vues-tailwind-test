@@ -2,7 +2,7 @@ import Home from "@/views/Home.vue"
 
 const routes = [
   {
-    path: '/',
+    path: process.env.NODE_ENV === 'production' ? '/vues-tailwind-test/dist/' : './',
     name:'Accueil',
     component: Home
   },
