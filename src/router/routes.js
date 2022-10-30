@@ -1,15 +1,17 @@
 import Home from "@/views/Home.vue"
 
+const appBasePath = process.env.NODE_ENV === 'production' ? '/vues-tailwind-test/dist/' : '/'
+
 const routes = [
   {
-    path: process.env.NODE_ENV === 'production' ? '/vues-tailwind-test/dist/' : './',
+    path: appBasePath,
     name:'Accueil',
     component: Home
   },
   {
-    path: '/modules',
+    path: appBasePath + 'modules/',
     name:'Modules',
-    //component: () => import('@/views/Modules.vue')
+    component: () => import('@/views/Modules.vue')
   }
 ]
 

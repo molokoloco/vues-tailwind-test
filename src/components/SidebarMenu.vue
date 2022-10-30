@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
-import { RouterLink, useRouter  } from 'vue-router';
+import { ref, onMounted } from 'vue'
+import { RouterLink, useRouter,  } from 'vue-router';
 
 import TeamIcon from './icons/Sidebar/TeamIcon.vue';
 import FavoritesIcon from './icons/Sidebar/FavoritesIcon.vue';
@@ -9,8 +10,69 @@ import HomeIcon from './icons/Sidebar/HomeIcon.vue';
 import NotificationsIcon from './icons/Sidebar/NotificationsIcon.vue';
 import PremiumImage from './Images/PremiumImage.vue';
 
-let currentRoute = useRouter().currentRoute?.value?.name;
-if (!currentRoute) currentRoute = 'Accueil';
+
+let currentroute = 'x'; //ref(null)
+
+
+// let currentRoute = useRouter().currentRoute?.name
+// console.log('currentRoute', useRouter().currentRoute);
+// if (!currentRoute) currentRoute = 'Accueil';
+
+// currentroute = ref(currentRoute)
+
+// function logRoute() {  // @click="logRoute"
+//   console.log('currentRoute', currentRoute);
+// }
+
+// onMounted(() => {
+//   console.log(`The initial currentroute is ${currentroute.value}.`)
+// })
+
+useRouter().afterEach((to, from) => {
+  //console.log('to, from', to, from);
+
+  const url = to ? to : from;
+  //console.log('url', url);
+  console.log('1--------currentRoute');
+  currentRoute = url.name
+  console.log('2--------currentRoute');
+})
+
+
+
+//console.log('$route.params.id', $route.params.id);
+// console.log('Route', useRouter().afterEach);
+
+// useRouter().afterEach((to, from) => {
+//    console.log('to, from', to, from);
+
+// })
+
+
+
+
+// defineProps({
+//   currentRoute: {
+//     type: String,
+//     required: true
+//   }
+// })
+
+// export default {
+//   data() {
+//     return {
+//       currentRoute: '/'
+//     }
+//   },
+//   methods: {
+//     test() { // @click="increment"
+//       console.log(this.currentRoute);
+//     }
+//   },
+//   mounted() {
+//     console.log(`The initial currentRoute is ${this.currentRoute}.`)
+//   }
+// }
 
 </script>
 
@@ -20,13 +82,13 @@ if (!currentRoute) currentRoute = 'Accueil';
 
     <ul class="card card-nav">
       <li :class="currentRoute === 'Accueil' ? 'menu-current' : ''">
-        <router-link to="/">
+        <router-link to="/vues-tailwind-test/dist/">
           <span class="icon-bg"><HomeIcon class="icon-menu"/></span>
           <span>Accueil</span>
         </router-link>
       </li>
       <li :class="currentRoute === 'Modules' ? 'menu-current' : ''">
-        <router-link to="#">
+        <router-link to="/vues-tailwind-test/dist/modules/">
           <span class="icon-bg"><ModulesIcon class="icon-menu"/></span>
           <span>Modules</span>
         </router-link>
